@@ -79,7 +79,7 @@ export const Partners = ({id}) => {
         <div className="container w-[100%] mx-auto">
           <Slider {...settings}>
             {partners.data.map((image, id) => (
-              <div className="py-4 h-40 w-72 rounded-xl cursor-pointer px-10">
+              <div key={image.id} className="py-4 h-40 w-72 rounded-xl cursor-pointer px-10">
                 <a
                   href={image?.url}
                   target="_blank"

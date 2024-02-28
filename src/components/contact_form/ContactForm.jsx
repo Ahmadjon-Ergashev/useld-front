@@ -1,32 +1,26 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
-import { Alert } from "flowbite-react";
-import i18next from "i18next";
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+
 
 export const ContactForm = () => {
   const { t } = useTranslation();
-
   const sendEmail = (e) => {
     e.preventDefault();
-    const obj = {
-      fullName: e.target.fullName.value,
-      phone: e.target.phone.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
-    };
+    const postData = new FormData();
+    postData.append('name', e.target.name.value);
+    postData.append('email', e.target.email.value);
+    postData.append('phone', e.target.phone.value);
+    postData.append('message', e.target.message.value);
 
-    fetch("https://coral-app-bsinx.ondigitalocean.app/send", {
+    fetch("https://ahmadjonergashev.pythonanywhere.com/send-info/", {
       method: "POST",
-      body: JSON.stringify(obj),
-      headers: {
-        token: localStorage.getItem("token"),
-        "Content-type": "application/json",
-      },
+      body: postData,
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         alert("Your message successfully sent");
         window.location.reload();
       })
@@ -40,7 +34,6 @@ export const ContactForm = () => {
           direction="left"
           className="md:w-1/2 text-right max-md:text-center"
         >
-          {/* <p className="text-secondary_color max-md:text-2xl max-md:m-5 max-md:text-center md:text-2xl lg:text-3xl pt-10 lg:pt-15"> */}
           <div>
             <h2 className="text-5xl font-bold text-[#0B2A5A] my-5 max-md:hidden"> &nbsp;</h2>
             <p className="text-secondary_color text-2xl max-md:text-lg">
@@ -61,19 +54,22 @@ export const ContactForm = () => {
                   <input
                     type="text"
                     required
-                    name="fullName"
-                    className="required  px-3 py-2  my-5   bg-[#FFF]  border shadow-sm border-[#082A58] placeholder-[#082A58] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+                    name="name"
+                    className="required px-3 py-2  my-5 bg-[#FFF] border shadow-sm border-[#082A58] placeholder-[#082A58] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
                     placeholder={t("contact.name")}
                   />
                 </label>
 
-                <label className="block  ">
-                  <input
-                    type="number"
-                    name="phone"
-                    required
-                    className=" px-3 py-2 bg-[#FFF]   border shadow-sm border-[#082A58] placeholder-[#082A58] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-                    placeholder="+(998) --- -- -- "
+                <label className="block">
+                  <PhoneInput
+                    country={'us'}
+                    inputProps={{
+                      name: 'phone',
+                      required: true,
+                      autoFocus: true
+                    }}
+                    containerClass="w-full"
+                    inputClass=" px-3 py-2 !border-[#082A58] !border shadow-sm  bg-[#FFF] border placeholder-[#082A58] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block !w-full rounded-md sm:text-sm focus:ring-1"
                   />
                 </label>
                 <label className="block ">
