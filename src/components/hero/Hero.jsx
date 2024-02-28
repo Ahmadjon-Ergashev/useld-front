@@ -33,18 +33,18 @@ export const Hero = () => {
     if (res.status === 200) {
       url === "responsibilities/"
         ? setMotto({
-            data: data,
-            isLoading: false,
-            error: "",
-          })
+          data: data,
+          isLoading: false,
+          error: "",
+        })
         : setBanner({ data: data, isLoading: false, error: "" });
     } else {
       url === "responsibilities/"
         ? setMotto({
-            data: [],
-            isLoading: false,
-            error: "Nimadir xato",
-          })
+          data: [],
+          isLoading: false,
+          error: "Nimadir xato",
+        })
         : setBanner({ data: [], isLoading: false, error: "Nimadir xato" });
     }
   };
@@ -90,17 +90,15 @@ export const Hero = () => {
                 <h1 className="text-5xl font-bold text-white text-center shadow-md max-md:text-3xl">
                   <span className="text-primary_color">
                     {t("Banner.title", {
-                      banner_content_title: `${
-                        item?.translations[`${i18next.language}`].title
-                      }`,
+                      banner_content_title: `${item?.translations[`${i18next.language}`].title
+                        }`,
                     })}
                   </span>
                 </h1>
                 <p className="text-xl text-white text-center mt-10  max-[550px]:text-base">
                   {t("Banner.desc", {
-                    banner_content_body: `${
-                      item?.translations[`${i18next.language}`].body
-                    }`,
+                    banner_content_body: `${item?.translations[`${i18next.language}`].body
+                      }`,
                   })}
                 </p>
               </div>
@@ -154,16 +152,14 @@ export const Hero = () => {
               {/* <HeroIcon /> */}
               <h2 className="text-2xl text-secondary_color  font-bold my-4">
                 {t("Motto.title", {
-                  motto_content_title: `${
-                    item?.translations[`${i18next.language}`].title
-                  }`,
+                  motto_content_title: `${item?.translations[`${i18next.language}`].title
+                    }`,
                 })}
               </h2>
               <p className="text-secondary_color text-xl">
                 {t("Motto.desc", {
-                  motto_content_body: `${
-                    item?.translations[`${i18next.language}`].body
-                  }`,
+                  motto_content_body: `${item?.translations[`${i18next.language}`].body
+                    }`,
                 })}
               </p>
             </div>

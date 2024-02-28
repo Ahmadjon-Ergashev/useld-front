@@ -29,7 +29,7 @@ export const ContactForm = () => {
   };
   return (
     <div className="bg-white mb-10">
-      <h1 id="contactus" className="mb-24">&nbpm;</h1>
+      <h1 id="contactus" className="mb-24">&nbsp;</h1>
       <div className="container mx-auto xl:w-[50%] md:w-[60%] flex justify-between lg:flex-row max-md:flex-col gap-5">
         <Slide
           direction="left"
