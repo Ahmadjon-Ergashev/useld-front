@@ -1,11 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
-import PhoneInput from 'react-phone-input-2'
+import PI from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
-
+const PhoneInput = PI.default ? PI.default : PI;
 
 export const ContactForm = () => {
+  
   const { t } = useTranslation();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -61,7 +62,7 @@ export const ContactForm = () => {
                 </label>
 
                 <label className="block">
-                  {/* <PhoneInput
+                  <PhoneInput
                     country={'us'}
                     inputProps={{
                       name: 'phone',
@@ -70,13 +71,13 @@ export const ContactForm = () => {
                     }}
                     containerClass="w-full"
                     inputClass=" px-3 py-2 !border-[#082A58] !border shadow-sm  bg-[#FFF] border placeholder-[#082A58] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block !w-full rounded-md sm:text-sm focus:ring-1"
-                  /> */}
-                  <input
+                  />
+                  {/* <input
                     type="number"
                     name="phone"
                     required
                     className=" px-3 py-2 bg-[#FFF]   border shadow-sm border-[#082A58] placeholder-[#082A58] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-                    placeholder="+(998) --- -- -- " />
+                    placeholder="+(998) --- -- -- " /> */}
                 </label>
                 <label className="block ">
                   <input
