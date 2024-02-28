@@ -83,11 +83,11 @@ export const Hero = () => {
         ) : (
           banner.data.map((item) => (
             <div
-              className="w-full h-[700px] max-md:h-auto relative -z-30 bg-black"
+              className="w-full h-[700px] max-md:h-[350px] relative -z-30 bg-black"
               key={item.id}
             >
-              <div className="absolute md:top-1/3 left-1/2 md:-translate-x-1/2 z-50 max-md:bottom-20 max-md:left-0 max-md:px-4 max-[550px]:bottom-3">
-                <h1 className="text-5xl font-bold text-white text-center shadow-md max-md:hidden">
+              <div className="absolute md:top-1/3 left-1/2 md:-translate-x-1/2 z-50 max-md:bottom-20 max-md:left-0 max-md:px-4">
+                <h1 className="text-5xl font-bold text-white text-center shadow-md max-md:text-2xl">
                   <span className="text-primary_color">
                     {t("Banner.title", {
                       banner_content_title: `${
@@ -148,7 +148,7 @@ export const Hero = () => {
         ) : (
           motto?.data?.slice(0, 3).map((item) => (
             <div
-              key={item.id}
+              key={item._id}
               className="md:w-[30%] max-md:bg-slate-50 max-md:rounded-3xl max-md:shadow-md max-md:py-10 max-md:px-2"
             >
               {/* <HeroIcon /> */}
