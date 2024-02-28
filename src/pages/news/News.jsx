@@ -44,9 +44,9 @@ export const News = () => {
         ) : (
           news.data.reverse().map((item) => (
             <Card
-              to={`/details/news/${item._id}`}
+              to={`/details/news/${item.id}`}
               className={""}
-              key={item._id}
+              key={item.id}
               imgSrc={item.photo}
               imgAlt={item.title_uz}
               title={t("NewsCard.title", {news_card_title: `${item?.[`title_${i18next.language}`]}`})}

@@ -84,7 +84,7 @@ export const Hero = () => {
           banner.data.map((item) => (
             <div
               className="w-full h-[700px] max-md:h-auto relative -z-30 bg-black"
-              key={item._id}
+              key={item.id}
             >
               <div className="absolute md:top-1/3 left-1/2 md:-translate-x-1/2 z-50 max-md:bottom-20 max-md:left-0 max-md:px-4 max-[550px]:bottom-3">
                 <h1 className="text-5xl font-bold text-white text-center shadow-md max-md:hidden">
@@ -148,7 +148,7 @@ export const Hero = () => {
         ) : (
           motto?.data?.slice(0, 3).map((item) => (
             <div
-              key={item._id}
+              key={item.id}
               className="md:w-[30%] max-md:bg-slate-50 max-md:rounded-3xl max-md:shadow-md max-md:py-10 max-md:px-2"
             >
               {/* <HeroIcon /> */}

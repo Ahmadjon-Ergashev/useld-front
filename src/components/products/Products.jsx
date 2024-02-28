@@ -130,7 +130,7 @@ export const Products = ({ id }) => {
         ) : (
           <Slider {...settings}>
             {products.data.map((item) => (
-              <Fade key={item._id} className="px-3">
+              <Fade key={item.id} className="px-3">
                 <div className="relative">
                   <LazyLoadImage
                     key={item.id}
