@@ -140,8 +140,8 @@ export const Products = ({ id }) => {
                     width={"100%"}
                     height={"100%"}
                   />
-                  <div className="product-card absolute bottom-5 left-0 w-[100%] h-[50%] flex items-end p-3">
-                    <p className="text-center w-full p-3 text-2xl text-white sm:text-base md:text-lg lg:text-xl xl:text-2xl max-sm:text-sm max-[600px]:text-base max-[480px]:text-xl">
+                  <div className="product-card absolute bottom-5 left-0 w-[100%] h-[100%] flex items-end pb-16 p-3">
+                    <p className="text-center w-full p-3 text-2xl text-warmGray-200 sm:text-base md:text-lg lg:text-xl xl:text-2xl max-sm:text-sm max-[600px]:text-base max-[480px]:text-xl">
                       {t("Starter.desc", {
                         starter_content_body: `${
                           item?.translations[`${i18next.language}`].body
