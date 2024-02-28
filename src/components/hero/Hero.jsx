@@ -87,7 +87,7 @@ export const Hero = () => {
               key={item.id}
             >
               <div className="absolute md:top-1/3 left-1/2 md:-translate-x-1/2 z-50 max-md:bottom-20 max-md:left-0 max-md:px-4">
-                <h1 className="text-5xl font-bold text-white text-center shadow-md max-md:text-2xl">
+                <h1 className="text-5xl font-bold text-white text-center shadow-md max-md:text-3xl">
                   <span className="text-primary_color">
                     {t("Banner.title", {
                       banner_content_title: `${
