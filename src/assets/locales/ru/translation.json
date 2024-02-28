@@ -3,9 +3,9 @@
     "name":"US ELD",
     "name2":"Logbook Service",
     "about": "О нас",
-    "product": "продукты",
-    "partners": "партнеры",
-    "ContactUs": "контакты",
+    "product": "Продукты",
+    "partners": "Партнеры",
+    "ContactUs": "Контакты",
     "language":"язык",
     "Gallary":"Галерея",
     "Fotogalery":"Фотогалерея",
@@ -112,6 +112,6 @@
     "desc": "{{faq_content_body}}"
   },
   "form":{
-    "description": "If you are an owner operator, company driver, or transportation company in the U.S and would like to receive high quality ELD support, then leave your details and we will contact you as soon as possible"
+    "description": "Если вы являетесь владельцем-оператором, водителем компании или транспортной компанией в США и хотите получить качественную поддержку ELD, оставьте свои данные, и мы свяжемся с вами как можно скорее."
   }
 }

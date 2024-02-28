@@ -84,7 +84,7 @@ export const ContactForm = () => {
                     required
                     name="email"
                     className="  my-5 px-3 py-2 bg-[#FFF]   border shadow-sm border-[#082A58] placeholder-[#082A58] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-                    placeholder="Email"
+                    placeholder={t("contact.email")}
                   />
                 </label>
 
@@ -96,7 +96,7 @@ export const ContactForm = () => {
                     rows="10"
                     name="message"
                     className="  mt-1 px-3 py-2 bg-[#FFF]   border shadow-sm border-[#082A58]  placeholder-[#082A58] focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-                    placeholder="Your message"
+                    placeholder={t("contact.message")}
                   ></textarea>
                 </label>
 
