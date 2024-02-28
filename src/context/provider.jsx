@@ -5,7 +5,7 @@ import { UsersContext, ScrollContext } from "./context";
 export let newsActions = null;
 export let smallActions = null;
 export let userActions = null;
-export const baseUrl = "https://ada1-213-230-107-121.ngrok-free.app/";
+export const baseUrl = "http://localhost:5001";
 // export const baseUrl = "http://localhost:5001";
 
 export const UsersProvider = ({ children }) => {
