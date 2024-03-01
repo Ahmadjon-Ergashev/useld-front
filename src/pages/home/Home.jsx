@@ -14,7 +14,7 @@ export const Home = () => {
     <div>
       <Hero />
       <AboutUs id={"aboutus"}/>
-      <Products id={"products"}/>
+      <Products id={"started"}/>
       <Partners id={"partners"}/>
       <ContactForm />
     </div>

@@ -75,7 +75,7 @@ export const Navbar = () => {
             {t("Header.about")}
           </a>
           <a
-            href={`#products`}
+            href={`#started`}
             className="max-xl:pl-14 max-xl:text-[#F06D06] font-bold text-xl max-xl:mb-2"
             onClick={() => toggleHamburger()}
           >

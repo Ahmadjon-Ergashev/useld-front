@@ -34,7 +34,7 @@ export const Footer = () => {
                 <a href="#aboutus">
                   <span className="mx-3">{t("Header.about")}</span>{" "}
                 </a>
-                <a href="#products">
+                <a href="#started">
                   <span className="mx-3">{t("Header.product")}</span>{" "}
                 </a>
 

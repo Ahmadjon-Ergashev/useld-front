@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /#aboutus
+Allow: /#started
+Allow: /#partners
+Allow: /#contactus
+Sitemap: https://useldservice.com/sitemap.xml
