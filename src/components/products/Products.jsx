@@ -5,15 +5,14 @@ import { Spinner } from "flowbite-react";
 import { Fade } from "react-awesome-reveal";
 import Slider from "react-slick";
 import i18next from "i18next";
+import { LeftChevron, RigthChevron } from "../../assets/icons";
+import { useTranslation } from "react-i18next";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useTranslation } from "react-i18next";
-
-import { LeftChevron, RigthChevron } from "../../assets/icons";
-import apiClient from "../../utils/apiClient";
-
 import "./Products.css";
+
+import apiClient from "../../utils/apiClient";
 
 
 function SampleNextArrow(props) {

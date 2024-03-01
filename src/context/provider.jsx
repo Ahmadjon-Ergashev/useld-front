@@ -5,19 +5,12 @@ import { UsersContext, ScrollContext } from "./context";
 export let newsActions = null;
 export let smallActions = null;
 export let userActions = null;
-export const baseUrl = "http://localhost:5001";
-// export const baseUrl = "http://localhost:5001";
+export const baseUrl = "https://api.useldservice.com/";
 
 export const UsersProvider = ({ children }) => {
   // Scroll value handled here
   const [scrollValue, setScrollValue] = useState(0);
 
-  // Fetching results here
-  const [news, setNews] = useState([]);
-  const [newById, setNewById] = useState({});
-  const [vacancys, setVacancys] = useState([]);
-  const [vacancyById, setVacancyById] = useState({});
-  const [users, setUsers] = useState([]);
   const [media, setMedia] = useState([]);
   const [banner, setBanner] = useState([]);
   const [photos, setPhotos] = useState([]);
@@ -30,7 +23,6 @@ export const UsersProvider = ({ children }) => {
 
   const config = {
     "Content-type": "application/json",
-    token: localStorage.getItem("token"),
   };
 
   smallActions = {
@@ -76,92 +68,18 @@ export const UsersProvider = ({ children }) => {
         setAlert(false);
       }, 3000);
     },
-
-    getPhotos: async (url) => {
-      setIsLoading(true);
-      const data = (
-        await fetch(`${baseUrl}/${url}`, { headers: config })
-      ).json();
-      data.then((res) => {
-        if (res.success) {
-          setPhotos(res.data);
-          setIsLoading(false);
-        } else {
-          setError(true);
-          setIsLoading(false);
-          setApplication([]);
-        }
-      });
-      setTimeout(() => {
-        setAlert(false);
-      }, 3000);
-    },
   };
 
-  newsActions = {
-    getNews: async (url) => {
-      setIsLoading(true);
-      const data = (
-        await fetch(`${baseUrl}/${url}`, { headers: config })
-      ).json();
-      data.then((res) => {
-        if (res.success) {
-          if (url === "news/all") {
-            setNews(res.data);
-          } else {
-            setVacancys(res.data);
-          }
-          setIsLoading(false);
-        } else {
-          setError(true);
-          setIsLoading(false);
-          setNews([]);
-        }
-      });
-      setTimeout(() => {
-        setAlert(false);
-      }, 3000);
-    },
-
-    getNewById: async (url) => {
-      setIsLoading(true);
-      const data = (
-        await fetch(`${baseUrl}/${url}`, { headers: config })
-      ).json();
-      data.then((res) => {
-        if (res.success) {
-          if (url === "news/add") {
-            setNewById(res.data);
-          } else {
-            setVacancyById(res.data);
-          }
-          setIsLoading(false);
-        } else {
-          setError(true);
-          setNewById({});
-          setVacancyById({});
-          setIsLoading(false);
-        }
-      });
-    },
-  };
 
   return (
     <UsersContext.Provider
       value={{
         scrollValue,
-        news,
-        newById,
-        vacancys,
-        vacancyById,
         isLoading,
         error,
         alert,
         modalClose,
-        users,
-        media,
         banner,
-        photos,
       }}
     >
       {children}

@@ -3,19 +3,12 @@
     "name": "US ELD",
     "name2": "Logbook Service",
     "about": "About Us",
-    "product": "Products",
+    "product": "Getting Started",
     "partners": "Partners",
     "ContactUs": "Contact us",
     "language": "Language",
-    "Gallary": "Photo gallery",
-    "Fotogalery": "Photo gallery",
-    "study": "Select the subject you want to study",
-    "OurProducts": "Our Products",
-    "Vacancies": "Vacancies",
-    "Questions": "Frequently Asked Questions",
     "OurPartners": "Platforms we work with:",
-    "AboutUs": "About Us",
-    "All": "All"
+    "AboutUs": "About Us"
   },
   "about": {
     "title": "US ELD Service has been working in the trucking industry for 3 years, high quality is ensured by our experienced specialists due to individual work with each driver. We appreciate each company and we are proud that 95% of clients come back to work with us again."
@@ -26,40 +19,9 @@
     "send": "SEND MESSAGE",
     "message": "Send message"
   },
-  "footer": {
-    "name": " Address: Republic of Uzbekistan, Sirdaryo region, Yangiyer city,industrial area"
-  },
-  "navHeader": {
-    "call": "Call Us",
-    "Email": "Email Us",
-    "Openouse": "Open House"
-  },
-  "name": {
-    "yangiyer": "YANGIYER FLOUR",
-    "trading": "TRADING"
-  },
-  "ResearcherOnline": {
-    "statistics": "Application statistics",
-    "Received": "Application statistics",
-    "Accepted": "Accepted",
-    "Rejected": "Rejected",
-    "review": "In review"
-  },
   "Hero": {
     "motto": "A real journalist should be awake... a real journalist should be conscientious...",
     "description": "Today there is a social network user who thinks he is a journalist. But I consider a journalist to be a person who sorts out various fake and credible information and delivers reliable information in the information space."
-  },
-  "NewsCard": {
-    "title": "{{news_card_title}}"
-  },
-  "RecommendContent": {
-    "title0": "{{recommend_content_title0}}",
-    "title": "{{recommend_content_title}}",
-    "button": "More news"
-  },
-  "MoreDetails": {
-    "title": "{{more_details_title}}",
-    "body": "{{more_details_body}}"
   },
   "Motto": {
     "title": "{{motto_content_title}}",
@@ -71,10 +33,6 @@
   },
   "Starter":{
     "desc": "{{starter_content_body}}"
-  },
-  "faq": {
-    "title": "{{faq_content_title}}",
-    "desc": "{{faq_content_body}}"
   },
   "form": {
     "description": "If you are an owner operator, company driver, or transportation company in the U.S and would like to receive high quality ELD support, then leave your details and we will contact you as soon as possible"

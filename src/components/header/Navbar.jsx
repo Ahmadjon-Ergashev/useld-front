@@ -1,9 +1,8 @@
 import { useContext, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Hamburger from "hamburger-react";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import "./Navbar.css";
 
 import { PhoneIcon, LangIcon } from "../../assets/icons";
@@ -11,12 +10,8 @@ import logo from "../../assets/images/logo.png";
 import { UsersContext } from "../../context";
 
 export const Navbar = () => {
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
   const { t } = useTranslation();
   const { pathname } = useLocation();
-  const navigate = useNavigate();
   const { scrollValue } = useContext(UsersContext);
   const [isOpen, setOpen] = useState({ hamburger: false, lang: false });
   const language = [
@@ -37,13 +32,6 @@ export const Navbar = () => {
   };
 
   const changeLanguage = (code) => {
-    // let pathnameLang = "uz";
-    // if (pathname.split("/")[1] === "uz") pathnameLang = "uz";
-    // if (pathname.split("/")[1] === "ru") pathnameLang = "ru";
-    // if (pathname.split("/")[1] === "en") pathnameLang = "en";
-    // if (pathname.split("/")[1] === "ar") pathnameLang = "ar";
-    // navigate(pathname.replace(pathnameLang, code));
-
     i18next.changeLanguage(code);
     window.location.reload(false);
   };
@@ -59,10 +47,6 @@ export const Navbar = () => {
           <a href="/" className="my-4 block">
             <div className="flex items-center ">
               <img src={logo} alt="" width={"30%"} className="" />
-              {/* <p className={`flex flex-col items-center`}>
-                <img src={logo_main} alt="logo" className="w-[40%]"/>
-                <img src={logo_extra} alt="logo" className="w-[40%]"/>
-              </p> */}
             </div>
           </a>
         </div>

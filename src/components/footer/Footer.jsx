@@ -23,7 +23,7 @@ export const Footer = () => {
             <div className="text-center">
               <Link to="/" className="my-4 block  ">
                 <div className="flex items-center ">
-                  <img src={logo} alt="Main logo" width={"20%"}/>
+                  <img src={logo} alt="Main logo" width={"20%"} />
                 </div>
               </Link>
             </div>
@@ -53,11 +53,15 @@ export const Footer = () => {
             <div className="lg:flex lg:flex-col flex-row-reverse   max-md:flex-col max-md:gap-10 ">
               <div className="flex items-center gap-2 my-3">
                 <PhoneIcon />
-                <a className="text-white" href="tel:+19292276727">+1 929 227 6727</a>
+                <a className="text-white" href="tel:+19292276727">
+                  +1 929 227 6727
+                </a>
               </div>
               <div className="flex items-center gap-2 my-3">
                 <Email />
-                <a className="text-white" href="mailto:useldservice@gmail.com">useldservice@gmail.com</a>
+                <a className="text-white" href="mailto:useldservice@gmail.com">
+                  useldservice@gmail.com
+                </a>
               </div>
 
               <div className="flex items-center gap-2 my-3">
@@ -73,13 +77,17 @@ export const Footer = () => {
               </div>
 
               <div className="flex lg:gap-4 gap-10">
-                <a href="https://t.me/tommy_useld"><TelegramIcon color="white" /></a>
-                
+                <a href="https://t.me/tommy_useld">
+                  <TelegramIcon color="white" />
+                </a>
+
                 {/* <InstagramIcon color="white" /> */}
                 {/* <FacebookIcon color="white" /> */}
                 {/* <YouTubeIcon color="white" /> */}
                 {/* <TwitterIcon color="white" /> */}
-                <a href="https://t.me/useld_support"><Support color="white" /></a>
+                <a href="https://t.me/useld_support">
+                  <Support color="white" />
+                </a>
               </div>
             </div>
             <div

@@ -3,13 +3,9 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 
-import translationUz from "./assets/locales/uz/translation.json";
 import translationRu from "./assets/locales/ru/translation.json";
 import translationEn from "./assets/locales/en/translation.json";
 const resources = {
-  uz: {
-    translation: translationUz,
-  },
   ru: {
     translation: translationRu,
   },
@@ -37,10 +33,7 @@ i18n
       ],
       caches: ["cookie"],
     },
-    react: { useSuspense: true },
-    // backend: {
-    //   loadPath: "/assets/locales/{{lng}}/translation.json",
-    // },
+    react: { useSuspense: true }, 
     interpolation: {
       escapeValue: false,
     },
