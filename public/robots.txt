@@ -3,4 +3,7 @@ Allow: /#aboutus
 Allow: /#started
 Allow: /#partners
 Allow: /#contactus
+Disallow: /cgi-bin/
+Disallow: /.well-known/
+Disallow: /assets/
 Sitemap: https://useldservice.com/sitemap.xml
