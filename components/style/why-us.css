@@ -1,0 +1,126 @@
+.why {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+/* Gold diagonal accent */
+.why::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+  opacity: 0.3;
+}
+.why-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.why-sub {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 16px auto 0;
+  line-height: 1.7;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.why-card {
+  background: var(--bg-secondary);
+  padding: 36px 32px;
+  position: relative;
+  transition: all var(--tr);
+  cursor: default;
+  overflow: hidden;
+}
+.why-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.why-card:hover {
+  background: var(--bg-tertiary);
+}
+.why-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* Subtle number watermark */
+.card-num {
+  position: absolute;
+  bottom: 12px;
+  right: 20px;
+  font-family: var(--font-display);
+  font-size: 80px;
+  font-weight: 900;
+  color: rgba(245, 166, 35, 0.04);
+  line-height: 1;
+  user-select: none;
+  transition: color var(--tr);
+}
+.why-card:hover .card-num {
+  color: rgba(245, 166, 35, 0.07);
+}
+
+.card-icon-wrap {
+  width: 52px;
+  height: 52px;
+  background: var(--gold-dim);
+  border: 1px solid rgba(245, 166, 35, 0.2);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  transition: all var(--tr);
+}
+.why-card:hover .card-icon-wrap {
+  background: rgba(245, 166, 35, 0.25);
+  border-color: rgba(245, 166, 35, 0.5);
+  transform: scale(1.08);
+}
+.card-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.card-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
