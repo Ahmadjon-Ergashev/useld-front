@@ -61,11 +61,11 @@ export const defaultContent: SiteContent = {
     ]
   },
   partners: [
-    { name: "Highway", logo: "/uploads/highway.png" },
-    { name: "Stripe", logo: "/uploads/stripe.png" },
-    { name: "Project44", logo: "/uploads/project44.png" },
-    { name: "Quick Manage", logo: "/uploads/quickmanage.png" },
-    { name: "Trucker Tool", logo: "/uploads/truckertool.png" },
+    { name: "Highway" },
+    { name: "Stripe" },
+    { name: "Project44" },
+    { name: "Quick Manage" },
+    { name: "Trucker Tool" },
   ],
   faq: [
     { question: "Is your ELD service FMCSA compliant?", answer: "Yes. Our ELD solutions are fully compliant with FMCSA regulations and help drivers maintain accurate Hours of Service (HOS) logs." },
@@ -91,13 +91,13 @@ export async function getContent(): Promise<SiteContent> {
 export async function updateContent(section: keyof SiteContent, data: any): Promise<SiteContent> {
   const current = await getContent()
   const updated = { ...current, [section]: data }
-  
+
   await prisma.siteContent.upsert({
     where: { id: 1 },
     create: { id: 1, content: JSON.stringify(updated) },
     update: { content: JSON.stringify(updated) }
   })
-  
+
   return updated
 }
 

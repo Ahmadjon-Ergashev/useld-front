@@ -50,7 +50,7 @@ export default function Navbar() {
                   {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
                 </button>
               )}
-              <a href="tel:+18001234567" className="btn-outline" style={{ fontSize: '16px', padding: '10px 20px' }}>
+              <a href="tel:+12247861501" className="btn-outline" style={{ fontSize: '16px', padding: '10px 20px' }}>
                 Call Us Now
               </a>
               {/* <a href="/admin" className="nav-admin" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>Admin <ArrowUpRight size={14} /></a> */}

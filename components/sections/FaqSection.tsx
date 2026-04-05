@@ -23,7 +23,7 @@ export default function FaqSection({ content }: { content: SiteContent["faq"] })
               </p>
               <div className="faq-contact-strip">
                 <span className="faq-contact-label">Email us anytime</span>
-                <span className="faq-contact-val">support@useld.com</span>
+                <span className="faq-contact-val">useldsales@gmail.com</span>
               </div>
             </div>
 

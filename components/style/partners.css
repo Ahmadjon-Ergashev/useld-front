@@ -5,10 +5,12 @@
   border-bottom: 1px solid var(--border-color);
   overflow: hidden;
 }
+
 .partners-header {
   text-align: center;
   margin-bottom: 48px;
 }
+
 .partners-title {
   font-family: var(--font-display);
   font-size: clamp(28px, 3.5vw, 44px);
@@ -17,13 +19,16 @@
   color: var(--text-primary);
   margin-bottom: 8px;
 }
+
 .partners-sub {
   font-size: 15px;
   color: var(--text-secondary);
 }
+
 .marquee-outer {
   position: relative;
 }
+
 .marquee-outer::before,
 .marquee-outer::after {
   content: "";
@@ -34,22 +39,27 @@
   z-index: 2;
   pointer-events: none;
 }
+
 .marquee-outer::before {
   left: 0;
   background: linear-gradient(90deg, var(--bg-secondary), transparent);
 }
+
 .marquee-outer::after {
   right: 0;
   background: linear-gradient(-90deg, var(--bg-secondary), transparent);
 }
+
 .marquee-track {
   display: flex;
   animation: marquee 22s linear infinite;
   width: max-content;
 }
+
 .marquee-track:hover {
   animation-play-state: paused;
 }
+
 .partner-item {
   display: flex;
   align-items: center;
@@ -60,11 +70,14 @@
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
+  padding: 0 20px;
   transition: background var(--tr);
 }
+
 .partner-item:hover {
   background: var(--gold-dim);
 }
+
 .partner-name {
   font-family: var(--font-display);
   font-size: 20px;
@@ -74,21 +87,25 @@
   color: var(--text-tertiary);
   transition: color var(--tr);
 }
+
 .partner-item:hover .partner-name {
   color: var(--gold);
 }
+
 .partners-note {
   text-align: center;
   margin-top: 40px;
   font-size: 13px;
   color: var(--text-tertiary);
 }
+
 .partners-note a {
   color: var(--gold);
   border-bottom: 1px solid rgba(245, 166, 35, 0.4);
   padding-bottom: 1px;
   transition: opacity var(--tr);
 }
+
 .partners-note a:hover {
   opacity: 0.75;
 }

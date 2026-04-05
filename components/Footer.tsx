@@ -1,5 +1,6 @@
 import "@/components/style/footer.css"
-import { LogoContent } from "./icons"
+import { LogoContent, WhatsAppIcon, TelegramIcon, InstagramIcon, FacebookIcon } from "./icons"
+import { Phone, Mail } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -17,11 +18,11 @@ export default function Footer() {
             Join 1000+ drivers who trust US ELD for hassle-free FMCSA compliance. Start your free trial today.
           </p>
           <div className="cta-actions">
-            <a href="mailto:info@useld.com" className="btn-gold" style={{ fontSize: '17px', padding: '15px 36px' }}>
+            <a href="mailto:useldsales@gmail.com" className="btn-gold" style={{ fontSize: '17px', padding: '15px 36px' }}>
               Start Free Trial
               <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </a>
-            <a href="tel:+18001234567" className="btn-outline" style={{ fontSize: '17px', padding: '14px 35px' }}>
+            <a href="tel:+12247861501" className="btn-outline" style={{ fontSize: '17px', padding: '14px 35px' }}>
               Call Us Now
             </a>
           </div>
@@ -62,11 +63,12 @@ export default function Footer() {
             <div className="footer-col">
               <h4>Contact</h4>
               <ul>
-                <li><a href="mailto:info@useld.com">info@useld.com</a></li>
-                <li><a href="mailto:support@useld.com">support@useld.com</a></li>
-                <li><a href="tel:+18001234567">+1 (800) 123-4567</a></li>
-                <li><a href="#">24/7 Live Support</a></li>
-                <li><a href="#">United States</a></li>
+                <li><a href="mailto:useldsales@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Mail size={16} /> useldsales@gmail.com</a></li>
+                <li><a href="tel:+12247861501" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Phone size={16} /> +1 (224) 786-1501</a></li>
+                <li><a href="https://wa.me/998946910913" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><WhatsAppIcon size={16} /> WhatsApp</a></li>
+                <li><a href="https://t.me/tommy_useld" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><TelegramIcon size={16} /> Telegram</a></li>
+                <li><a href="https://www.instagram.com/useldservice/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><InstagramIcon size={16} /> Instagram</a></li>
+                <li><a href="https://www.facebook.com/salesuseld/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><FacebookIcon size={16} /> Facebook</a></li>
               </ul>
             </div>
           </div>
