@@ -25,7 +25,10 @@ export default function AdminPage() {
           if (d.valid) {
             setToken(t);
             loadContent();
-          } else localStorage.removeItem("useld_token");
+          } else {
+            localStorage.removeItem("useld_token");
+            setToken(null);
+          }
         });
   }, []);
 

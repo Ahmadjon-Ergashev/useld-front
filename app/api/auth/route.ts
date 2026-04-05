@@ -3,7 +3,7 @@ import { ADMIN_USER, ADMIN_PASS } from '@/lib/store'
 import { sessions } from '@/lib/auth'
 
 export async function GET(req: NextRequest) {
-  const token = req.headers.get('authorization')?.replace('Bearer ', '')
+  const token = req.headers.get('authorization')?.replace(/^Bearer\s+/i, '')
   if (!token) return NextResponse.json({ valid: false })
   const exp = sessions.get(token)
   if (!exp || exp < Date.now()) { sessions.delete(token || ''); return NextResponse.json({ valid: false }) }
@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 })
   }
   if (body.action === 'logout') {
-    const token = req.headers.get('authorization')?.replace('Bearer ', '')
+    const token = req.headers.get('authorization')?.replace(/^Bearer\s+/i, '')
     if (token) sessions.delete(token)
     return NextResponse.json({ success: true })
   }

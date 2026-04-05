@@ -5,7 +5,8 @@ import { sessions } from '@/lib/auth';
 
 export async function POST(req: NextRequest) {
   try {
-    const token = req.headers.get('authorization')?.replace('Bearer ', '');
+    const authHeader = req.headers.get('authorization');
+    const token = authHeader?.replace(/^Bearer\s+/i, '');
     const exp = sessions.get(token || '');
     if (!exp || exp < Date.now()) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });

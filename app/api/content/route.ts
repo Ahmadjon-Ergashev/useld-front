@@ -8,7 +8,7 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   try {
-    const token = req.headers.get('authorization')?.replace('Bearer ', '')
+    const token = req.headers.get('authorization')?.replace(/^Bearer\s+/i, '')
     const exp = sessions.get(token || '')
     if (!exp || exp < Date.now()) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
