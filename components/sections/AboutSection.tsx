@@ -37,7 +37,31 @@ export default function AboutSection({ content }: { content: SiteContent['about'
 
             {/* Right: text */}
             <div className="about-text">
-              <div className="stag">About Us</div>
+              <div className="stag" style={{ justifyContent: "center" }}>
+                <span
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    fontFamily: "var(--font-display)",
+                    fontSize: "13px",
+                    fontWeight: 700,
+                    letterSpacing: "0.25em",
+                    textTransform: "uppercase",
+                    color: "var(--gold)",
+                  }}>
+                  About Us
+                  <span
+                    style={{
+                      display: "block",
+                      width: "28px",
+                      height: "2px",
+                      background: "var(--gold)",
+                      borderRadius: "1px",
+                    }}
+                  />
+                </span>
+              </div>
               <h2 className="stitle" style={{ marginBottom: '32px' }}>
                 Trusted ELD<br /><span className="gold">Compliance</span><br />Experts
               </h2>

@@ -1,6 +1,7 @@
 import "@/components/style/footer.css"
 import { LogoContent, WhatsAppIcon, TelegramIcon, InstagramIcon, FacebookIcon } from "./icons"
 import { Phone, Mail } from 'lucide-react'
+import ContactInquiry from "./ContactInquiry"
 
 export default function Footer() {
   return (
@@ -29,6 +30,9 @@ export default function Footer() {
           <p className="cta-note">Plans from <span>$109/month</span> · No setup fees · Cancel anytime</p>
         </div>
       </section>
+
+      {/* CONTACT INQUIRY */}
+      <ContactInquiry />
 
       {/* FOOTER */}
       <footer className="footer">
