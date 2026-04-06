@@ -27,15 +27,6 @@ export default function WhyUsSection({ content }: { content: SiteContent["whyUs"
                   textTransform: "uppercase",
                   color: "var(--gold)",
                 }}>
-                <span
-                  style={{
-                    display: "block",
-                    width: "28px",
-                    height: "2px",
-                    background: "var(--gold)",
-                    borderRadius: "1px",
-                  }}
-                />
                 Why Choose Us
                 <span
                   style={{
