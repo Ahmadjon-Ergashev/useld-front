@@ -55,11 +55,11 @@ export default function Navbar() {
               </a>
               {/* <a href="/admin" className="nav-admin" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>Admin <ArrowUpRight size={14} /></a> */}
               {/* <a href="#contact" className="btn-gold" style={{ padding: '10px 22px', fontSize: '14px' }}>Free Trial</a> */}
-              <button className="hamburger" onClick={() => setOpen(!open)} aria-label="Menu">
+              {/* <button className="hamburger" onClick={() => setOpen(!open)} aria-label="Menu">
                 <span style={{ transform: open ? 'rotate(45deg) translate(5px,5px)' : 'none' }} />
                 <span style={{ opacity: open ? 0 : 1 }} />
                 <span style={{ transform: open ? 'rotate(-45deg) translate(5px,-5px)' : 'none' }} />
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
