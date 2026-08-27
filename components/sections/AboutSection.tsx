@@ -20,6 +20,10 @@ export default function AboutSection({ content }: { content: SiteContent['about'
                         <div className="astat-icon">
                           {i === 0 ? <Truck size={28} /> : i === 1 ? <CheckCircle size={28} /> : <Star size={28} />}
                         </div>
+                        <div>
+                          <div className="astat-num">{s.value}</div>
+                          <div className="astat-lbl">{s.label}</div>
+                        </div>
                       </div>
                     </div>
                   ))}
