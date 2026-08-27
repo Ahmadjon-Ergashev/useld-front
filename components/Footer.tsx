@@ -27,7 +27,6 @@ export default function Footer() {
               Call Us Now
             </a>
           </div>
-          <p className="cta-note">Plans from <span>$109/month</span> · No setup fees · Cancel anytime</p>
         </div>
       </section>
 
@@ -69,7 +68,7 @@ export default function Footer() {
               <ul>
                 <li><a href="mailto:useldsales@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Mail size={16} /> useldsales@gmail.com</a></li>
                 <li><a href="tel:+12247861501" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Phone size={16} /> +1 (224) 786-1501</a></li>
-                <li><a href="https://wa.me/998946910913" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><WhatsAppIcon size={16} /> WhatsApp</a></li>
+                <li><a href="https://wa.me/998940900999" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><WhatsAppIcon size={16} /> WhatsApp</a></li>
                 <li><a href="https://t.me/tommy_useld" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><TelegramIcon size={16} /> Telegram</a></li>
                 <li><a href="https://www.instagram.com/useldservice/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><InstagramIcon size={16} /> Instagram</a></li>
                 <li><a href="https://www.facebook.com/salesuseld/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><FacebookIcon size={16} /> Facebook</a></li>

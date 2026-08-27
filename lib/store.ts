@@ -72,7 +72,6 @@ export const defaultContent: SiteContent = {
     { question: "How quickly can I start using your ELD service?", answer: "You can start the same day. Our team helps with quick setup and provides guidance to ensure everything is working properly." },
     { question: "Do you provide technical support?", answer: "Yes. We offer professional technical support to help drivers resolve issues and manage their logbooks correctly." },
     { question: "Do you help with DOT audits?", answer: "Yes. Our team has helped companies successfully pass 200+ DOT audits by ensuring proper logbook management and compliance." },
-    { question: "How much does your ELD service cost?", answer: "Our pricing depends on the platform and features. Plans typically start from $109 per month." },
     { question: "Do you offer a free trial?", answer: "Yes. We periodically offer free trials so companies can test our service before committing." },
   ]
 }

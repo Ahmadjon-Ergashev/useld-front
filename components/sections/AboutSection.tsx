@@ -29,10 +29,6 @@ export default function AboutSection({ content }: { content: SiteContent['about'
                   ))}
                 </div>
               </div>
-              <div className="about-badge-strip">
-                <span className="badge-strip-num">$109</span>
-                <span className="badge-strip-lbl">Starting / mo</span>
-              </div>
             </div>
 
             {/* Right: text */}
